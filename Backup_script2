@@ -1,0 +1,17 @@
+#!/bin/sh
+# Backup script
+# Description: makes a copy of any given file at the backup folder
+# Author: Owl
+# Date: 07/04/2017
+
+# Creating a file and granting permissions:
+# touch filebackup2
+# chmod +x filebackup2
+# nano filebackup2
+
+echo -e "\e[1m\e[32mFile Backup Utility\n\e[39m\e[0mPlease input your backup folder:"
+read BACKUPFOLDER
+mkdir -p $BACKUPFOLDER
+echo -e "\e[47m\e[30mWhich files do you want backed up?\e[39m\e[49m"
+read FILES
+cp -a $FILES $BACKUPFOLDER
