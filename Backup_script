@@ -1,5 +1,14 @@
 #!/bin/sh
-#Backup script
-#Description: makes a copy of any given file at the backup folder
-#Author: Owl
-#Date: 07/04/2017
+# Backup script
+# Description: makes a copy of any given file at the backup folder
+# Author: Owl
+# Date: 07/04/2017
+
+# Creating a file and granting permissions:
+# touch filebackup
+# chmod +x filebackup
+# nano filebackup
+
+BACKUPFOLDER=backup
+mkdir -p $BACKUPFOLDER
+cp -a $@ $BACKUPFOLDER
